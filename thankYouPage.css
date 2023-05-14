@@ -127,6 +127,11 @@ body {
         margin-left: 2rem;
     }
 
+    #home-page {
+        justify-content: center;
+        margin-right: 19rem;
+    }
+    
 }
 
   #my-info {
@@ -162,6 +167,10 @@ body {
 .no-Show-Home {
     display: none;
     visibility: hidden;
+}
+
+#home-page {
+    justify-content: center;
 }
 
 .show-Home {
