@@ -27,7 +27,7 @@ body {
         justify-content: space-between;
     }
  /* elemnts in Left-Contaner*/
-
+        
         /*main navigation bar*/
         .openMobleElements{
             display: flex;/*not visible by defalt*/
@@ -121,6 +121,10 @@ body {
             justify-content: center;
         }
 
+        #text-discount {
+            width: 40rem;
+            height: 40rem;
+        }
         /*tab for user to put their email*/
         #email-input{
             display: flex;
@@ -131,14 +135,14 @@ body {
         input {
             justify-content: center;
             align-items: center;
-            height: 3rem;
-            width: 304px;
+            height: 5.25rem;
+            width: 30rem;
             background: #FFFFFF;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
+            border-radius: 20px;
             border-color: transparent;
             text-align: center;
-            
+            font-size: 20px;
         }
 
         #text-box{
@@ -169,17 +173,17 @@ body {
         #the-submit-button {
             justify-content: center;
             align-items: center;
-            width: 17rem;
-            height: 3.25rem;
-            border-radius: 10px;
-            border-width: 2px;
+            width: 30rem;
+            height: 5.25rem;
+            border-radius: 25px;
+            border-width: 4px;
             background-color: transparent;
             border-color: #1b71fc;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
             cursor: pointer;   
             color: #1b71fc;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 30px;
             font-family: 'Poppins';
             
         }
@@ -206,9 +210,9 @@ body {
 
         #page-logo {
             display: flex;
-            margin-top: 5rem;
+            margin-top: 15rem;
             justify-content: center;
-            height: 128px;
+            height: 265px;
         }
 
         #large-page-logo{
@@ -227,17 +231,6 @@ body {
         justify-content: space-between;
     }
     
-    /* elemnts in Left-Contaner*/
-
-        .Left-Contaner {
-            margin-left: 12rem;
-        }
-        /*full page items & elements*/
-        .page-items-contaner {
-            display: flex;
-            flex-direction: row;
-        }
-        
         /*main navigation bar*/
         .openMobleElements{
             display: flex;/*not visible by defalt*/
@@ -248,6 +241,10 @@ body {
             align-items: center;
             background: #005FF7;
 
+        }
+
+        .mobleElements {
+            
         }
 
         #about-tab {
@@ -263,11 +260,28 @@ body {
             margin-left: 2rem;
         }
 
+
+    /* elemnts in Left-Contaner*/
+
+        .Left-Contaner {
+            margin-left: 12rem;
+        }
+        /*full page items & elements*/
+        .page-items-contaner {
+            display: flex;
+            flex-direction: row;
+        }
+        
         /*text*/
         .header-contaner {
             display: flex;
             justify-content: start;
             margin-left: 10rem;
+        }
+
+        #text-discount {
+            width: auto;
+            height: auto
         }
 
         /*tab for user to put their email*/
