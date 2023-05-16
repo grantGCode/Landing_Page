@@ -38,17 +38,24 @@ body {
         height: 169px;
         align-items: center;
         background: #005FF7;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
 
     }
 
     .logo-small {
-        margin-left: 2rem;
+        display: flex;
+        margin-left: 1.5rem;
+        width: 5rem;
+        height: 5rem;
 
     }
+
     #nav-logo {
-        display: inline;
-        height: 3rem;
-        width: 3rem;
+        display: flex;
+        margin-left: 1.5rem;
+        width: 5rem;
+        height: 5rem;
     }
 /* 
     #small-logo-desktop{
@@ -67,8 +74,7 @@ body {
         display: flex;/*not visible by defalt */
         font-family: 'Poppins';
         font-weight: 700;
-        font-size: 20px;
-        line-height: 15px;   
+        font-size: 1.75rem;
         align-items: center;
         text-align: center;
         text-decoration: none;
@@ -89,16 +95,17 @@ body {
     }
 
     #burger-button {
-        margin-right: 20px;
+        margin-right: 2rem;
         justify-content: end;
         background-color: transparent;
         border-color: transparent;
-        width: 50px;
-        height: 35px;
         color: #FFFFFF;
         font-size: 1.8rem;
         cursor: pointer;
+        font-size: 3rem;
+        padding-bottom: .25rem;
     }
+    
     /*Thank you message*/
     #retangleBox {
 
@@ -106,13 +113,37 @@ body {
         justify-content: center;
         flex-direction: column;
         margin-top: 10rem;
-        width: 1000rem;
-        /* height: 5000rem; */
+        width: 35rem;
+        height: 40rem;
         background: #F5F5F5;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
     }
-        
+    
+    #Thank-You-Text {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 3rem;
+        align-items: center;
+        text-align: center;    
+        color: #000000;
+    }
+
+    .we-Sent-Text-Font {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        /* display: flex; */
+        align-items: center;
+        text-align: center;
+    
+        color: #000000;
+    }
 
   }
 
@@ -135,7 +166,47 @@ body {
         justify-content: center;
         margin-right: 19rem;
     }
+
+    #retangleBox {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10rem;
+        width: 407px;
+        height: 433px;
+        background: #F5F5F5;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
     
+    #Thank-You-Text {
+        height: auto;
+        width: auto;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 27px;
+        align-items: center;
+        text-align: center;    
+        color: #000000;
+    }
+
+    .we-Sent-Text-Font {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 27px;
+        margin-bottom: 2rem;
+        /* display: flex; */
+        align-items: center;
+        text-align: center;
+    
+        color: #000000;
+    }
+
 }
 
   #my-info {
@@ -154,18 +225,6 @@ body {
     border-radius: 10px;
   } */
 
-  #retangleBox {
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 10rem;
-    width: 407px;
-    height: 433px;
-    background: #F5F5F5;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
 
 
 .no-Show-Home {
@@ -181,33 +240,7 @@ body {
     display: inline;
 }
 
-#Thank-You-Text {
-    height: auto;
-    width: auto;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 27px;
-    align-items: center;
-    text-align: center;    
-    color: #000000;
-}
 
 #p1{
     margin-top: 4rem;
-}
-
-.we-Sent-Text-Font {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 27px;
-    margin-bottom: 2rem;
-    /* display: flex; */
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
 }
