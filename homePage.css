@@ -34,7 +34,8 @@ body {
             width: auto;
             flex-direction: row;
             justify-content: space-between;
-            height: 169px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             align-items: center;
             background: #005FF7;
 
@@ -53,7 +54,7 @@ body {
             display: flex;/*not visible by defalt*/
             font-family: 'Poppins';
             font-weight: 700;
-            font-size: 20px;
+            font-size: 1.75rem;
             line-height: 15px;   
             align-items: center;
             text-align: center;
@@ -76,6 +77,8 @@ body {
 
         .mobleElements {
             display: flex;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             width: auto;
             flex-direction: row;
             justify-content: space-between;
@@ -94,8 +97,8 @@ body {
             #logo-small {
                 display: flex;
                 margin-left: 1.5rem;
-                width: 54px;
-                height: 54px;
+                width: 85px;
+                height: 85px;
             }
 
             .small-logo-desktop{
@@ -113,7 +116,11 @@ body {
                 font-size: 1.8rem;
                 /* cursor: pointer; */
             } 
-        
+            
+            i {
+                font-size: 9000;
+            }
+
             /*text*/
         .header-contaner {
             display: flex;
@@ -141,7 +148,7 @@ body {
             border-radius: 20px;
             border-color: transparent;
             text-align: center;
-            font-size: 20px;
+            font-size: 25px;
         }
 
         #text-box{
@@ -242,9 +249,9 @@ body {
 
         }
 
-        .mobleElements {
-            
-        }
+        /* .mobleElements {
+            height: 106px;
+        } */
 
         #about-tab {
             margin-right: 19rem;
@@ -301,6 +308,7 @@ body {
             border-radius: 10px;
             border-color: transparent;
             text-align: center;
+            font-size: 13px;
             /* margin-bottom: 5rem; */
         }
 

@@ -146,25 +146,27 @@ body {
         justify-content: center;
         margin-right: 19rem;
     }
-   
+   /*header*/
+    h1 {
+        
+        font-family: 'Poppins', sans-serif;
+        
+        width: auto;
+        height: 113px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 50px;
+        margin-top: 5%;
+        text-align: center;
+        color: #005FF6;
+
+    }
+
+    
 }
 
-/*header*/
-h1 {
-    
-    font-family: 'Poppins', sans-serif;
-    
-    width: auto;
-    height: 113px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 50px;
-    margin-top: 5%;
-    text-align: center;
-    color: #005FF6;
 
-}
 
 /* .about-header {
     text-align: center;
