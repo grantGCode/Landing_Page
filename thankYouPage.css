@@ -147,6 +147,7 @@ body {
 
   }
 
+  /*Desktop View*/
 @media screen and (min-width: 1880px ) {
     #background {
         background-image: url("/Images/Back\ ground\ logos.svg");
@@ -164,7 +165,7 @@ body {
 
     #home-page {
         justify-content: center;
-        margin-right: 19rem;
+        margin-right: 2rem;
     }
 
     #retangleBox {
