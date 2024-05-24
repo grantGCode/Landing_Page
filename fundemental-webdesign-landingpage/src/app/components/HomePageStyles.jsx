@@ -41,13 +41,23 @@ export const HomePageStyles = styled.div`
         min-height: 100%;
     }
 
-    .hero-logo {
-        object-fit: contain;
-        width: 100%;
+    h1, h3, .originator {
+        font-size: 25px;
     }
 
     h1 {
-        padding-bottom: 65px;
+        padding-bottom: 35px;
+        font-weight: 300;
+    }
+
+    .bold-blue {
+        font-weight: 700;
+        color: #005FF6
+    }
+
+    h2 {
+        font-weight: 200;
+        font-size: 15px;
     }
 
     .hero-text {
@@ -68,7 +78,6 @@ export const HomePageStyles = styled.div`
         text-align: center;
         box-shadow: inset 0 0 10px #d7d6d6;
         background-color: #f5f5f5;
-        
     }
 
     button {
@@ -81,6 +90,38 @@ export const HomePageStyles = styled.div`
         height: 81px;
     }
 
+    .hero-logo {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+    }
 
+    .quote-container {
+        background-color: #509fa5;
+        background-image: url("./quote-bg-image.png");
+        background-image: no-repeat;
+        background-size: cover;
+        background-position-x: center;
 
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    .quote-text {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 240px;
+        padding: 0 70px;
+    }
+
+    h3 {
+        font-weight: 100;
+    }
+
+    .originator {
+        font-weight: bold;
+        width: 75%;
+    }
 `;

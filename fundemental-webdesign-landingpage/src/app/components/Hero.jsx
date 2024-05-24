@@ -7,8 +7,8 @@ export const Hero = () => {
                 <source src="/hero-bg-video.mp4" type="video/mp4" />
             </video>
             <div className="hero-text">
-                <h1>Get your 25% discount below!</h1>
-                <p>Sign up below to get a 25% percent discount on your first professional website.</p>
+                <h1>Get your <span className="bold-blue">25%</span> discount below!</h1>
+                <h2>Sign up below to get a 25% percent discount on your first professional website.</h2>
             </div>
             <div className="hero-form">
                 <form>
