@@ -82,6 +82,8 @@ export const HomePageStyles = styled.div`
 
     button {
         background-color: white;
+        font-weight: bold;
+        font-size: 18px;
     }
 
     input, button {
@@ -123,5 +125,107 @@ export const HomePageStyles = styled.div`
     .originator {
         font-weight: bold;
         width: 75%;
+    }
+
+
+    .middle-cta-container{
+        background-color: #f5f5f5;
+        background-image: url("./background-logo.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 50px;
+    }
+
+    .middle-cta-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 0 50px;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 22px;
+        font-style: italic;
+    }
+
+    .middle-cta-copy {
+        font-weight: 200;
+        font-size: 10px;
+    }
+
+    .male-model {
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    .card-image-container {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    .card-image {
+        object-fit: contain;
+        width: 50%;
+        height: 75%;
+    }
+
+    .card-copy {
+        color: white;
+        font-weight: 200;
+        font-size: 12x;
+    }
+
+    .black-font {
+        color: black;
+    }
+
+    .card-1 {
+        background-color: #005FF6;
+    }
+
+    .card-2 {
+        background-color: #4087F8;
+    }
+
+    .card-3 {
+        background-color: #80AFFB;
+    }
+
+    .card-4 {
+        background-color: #BFD7FD;
+    }
+
+    @keyframes bobbing {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    .card-image {
+        animation: bobbing 1.5s ease-in-out infinite;
     }
 `;

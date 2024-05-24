@@ -1,6 +1,8 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Quote } from "./components/Quote";
+import { MiddleCTA } from "./components/MiddleCTA";
+import { CardsSection } from "./components/CardsSection";
 
 export default function Home() {
   
@@ -9,6 +11,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Quote />
+        <MiddleCTA />
+        <CardsSection />
       </>
   );
 }
