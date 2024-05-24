@@ -3,8 +3,6 @@ import Image from "next/image";
 export const Card = ({title, src, copy, number}) => {
     const blackFont = number === 4 ? 'black-font' : '';
 
-    console.log(blackFont)
-
     return (
         <div className={`card-container card-${number}`}>
             <div className='card-content'>

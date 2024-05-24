@@ -5,10 +5,8 @@ import { MiddleCTA } from "./components/MiddleCTA";
 import { CardsSection } from "./components/CardsSection";
 
 export default function Home() {
-  
   return (
       <>
-        <Navbar />
         <Hero />
         <Quote />
         <MiddleCTA />

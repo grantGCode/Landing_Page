@@ -228,4 +228,36 @@ export const HomePageStyles = styled.div`
     .card-image {
         animation: bobbing 1.5s ease-in-out infinite;
     }
+
+    .footer-copy, .credits {
+        color: white;
+        font-weight: 100;
+    }
+
+    footer {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px;
+    }
+
+    .footer-image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .line {
+        border: 1px solid white;
+    }
+
+    .credits {
+        text-align: center;
+    }
+
+    .footer-logo {
+        object-fit: contain;
+        width: 50%;
+        height: 50%;
+    }
 `;
