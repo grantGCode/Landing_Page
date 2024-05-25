@@ -3,15 +3,14 @@
 import styled from "styled-components"
 
 export const HomePageStyles = styled.div`
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden;
 
     .navbar-container {
         background-color: black;
         display: flex;
         justify-content: center;
         padding: 25px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     }
 
     #logo {
@@ -24,10 +23,7 @@ export const HomePageStyles = styled.div`
         display: none;
     }
 
-    .hero-container {
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
+    .hero-position {
         position: relative;
         overflow: hidden;
     }
@@ -39,6 +35,12 @@ export const HomePageStyles = styled.div`
         left: 0;
         min-width: 100%;
         min-height: 100%;
+    }
+
+    .hero-container {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
     }
 
     h1, h3, .originator {
@@ -78,12 +80,22 @@ export const HomePageStyles = styled.div`
         text-align: center;
         box-shadow: inset 0 0 10px #d7d6d6;
         background-color: #f5f5f5;
+        font-size: 15px;
     }
 
     button {
         background-color: white;
         font-weight: bold;
         font-size: 18px;
+
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #005FF6;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);   
     }
 
     input, button {
@@ -126,7 +138,6 @@ export const HomePageStyles = styled.div`
         font-weight: bold;
         width: 75%;
     }
-
 
     .middle-cta-container{
         background-color: #f5f5f5;
@@ -259,5 +270,76 @@ export const HomePageStyles = styled.div`
         object-fit: contain;
         width: 50%;
         height: 50%;
+        animation: slide 5s ease-in-out infinite;
+    }
+
+    @media (min-width: 975px){
+
+        .hero-position {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+        }
+        
+        .desktop-content-container {
+            width: 460px;            
+        }
+
+        .hero-container {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding: 100px 50px;
+            gap: 100px;
+        }
+
+        .hero-text {
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        input, button {
+            width: 460px;
+            height: 80px;
+        }
+
+        .hero-image {
+            width: 475px;
+        }
+
+        .hero-logo {
+            padding: 0;
+        }
+
+        .quote-container {
+            display: flex;
+            justify-content: center;
+            background-position-y: center;
+        }
+
+        .quote-text {
+            align-items: center;
+            max-width: 1280px;
+        }
+
+        h3 {
+            font-weight: 200;
+        }
+
+        h3, .originator {
+            font-size: 50px;
+            text-align: center;
+        }
     }
 `;
