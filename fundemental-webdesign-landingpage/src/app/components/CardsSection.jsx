@@ -14,13 +14,15 @@ export const CardsSection = async () => {
     const { cards } = await fetchCardContent(); 
     
     return (
-        <>
-            {cards.map((card, index) => {
-                const number = index + 1;
-                return (
-                    <Card key={index} title={card.title} src={card.src} copy={card.copy} number={number}/>
-                )
-            })}
-        </>
+        <div className="card-position-container">
+            <div className="card-desktop-container">
+                {cards.map((card, index) => {
+                    const number = index + 1;
+                    return (
+                        <Card key={index} title={card.title} src={card.src} copy={card.copy} number={number}/>
+                    )
+                })}
+            </div>
+        </div>
     );
 };

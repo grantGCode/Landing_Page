@@ -157,15 +157,26 @@ export const HomePageStyles = styled.div`
         padding: 0 50px;
     }
 
+    .middle-cta-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
     h4 {
         font-weight: bold;
         font-size: 22px;
         font-style: italic;
     }
 
-    .middle-cta-copy {
+    .middle-cta-copy-m {
         font-weight: 200;
         font-size: 10px;
+    }
+
+    .middle-cta-copy-d {
+        display: none;
     }
 
     .male-model {
@@ -340,6 +351,60 @@ export const HomePageStyles = styled.div`
         h3, .originator {
             font-size: 50px;
             text-align: center;
+        }
+
+        .middle-cta-container {
+            padding-top: 0px;
+            background-image: url("./background-logo-desktop.png");
+            background-size: cover;
+            animation: slide 60s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { background-position: 0 0; }
+            50% { background-position: 100 0; }
+        }
+
+        .middle-cta-content {
+            flex-direction: row-reverse
+        }
+
+        .middle-cta-text {
+            align-items: start;
+            width: 460px;
+        }
+
+        h4 {
+            font-size: 40px;
+        }
+
+        .middle-cta-copy-m {
+            display: none;
+        }
+
+        .middle-cta-copy-d {
+            display: block;
+            font-size: 14px;
+        }
+
+        .section-image {
+            height: 730px;
+        }
+
+        .male-model {
+            height: 100%;
+            object-position: bottom;
+        }
+
+        .card-desktop-container {
+            display: flex;
+        }
+
+        .card-image-container {
+            margin-top: 25px;
+            padding: 0px;
+            width: 250px;
+            height: 100px;
         }
     }
 `;
