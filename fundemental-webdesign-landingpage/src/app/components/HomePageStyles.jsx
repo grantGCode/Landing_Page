@@ -254,6 +254,7 @@ export const HomePageStyles = styled.div`
     .footer-copy, .credits {
         color: white;
         font-weight: 100;
+        padding-bottom: 25px;
     }
 
     footer {
@@ -273,6 +274,12 @@ export const HomePageStyles = styled.div`
         border: 1px solid white;
     }
 
+    .footer-bottom-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
     .credits {
         text-align: center;
     }
@@ -281,7 +288,6 @@ export const HomePageStyles = styled.div`
         object-fit: contain;
         width: 50%;
         height: 50%;
-        animation: slide 5s ease-in-out infinite;
     }
 
     @media (min-width: 975px){
@@ -366,7 +372,7 @@ export const HomePageStyles = styled.div`
         }
 
         .middle-cta-content {
-            flex-direction: row-reverse
+            flex-direction: row-reverse;
         }
 
         .middle-cta-text {
@@ -405,6 +411,32 @@ export const HomePageStyles = styled.div`
             padding: 0px;
             width: 250px;
             height: 100px;
+        }
+
+        footer {
+            justify-content: center;
+        }
+
+        .footer-top-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+            gap: 50px;
+        }
+
+
+        .footer-copy {
+            width: 20%;
+        }
+
+        .footer-bottom-container {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .footer-logo {
+            width: 100%;
+            height: 100%;
         }
     }
 `;
