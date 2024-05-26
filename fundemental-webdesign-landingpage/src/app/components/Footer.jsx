@@ -9,17 +9,21 @@ export const Footer = () => {
     `
     return (
         <footer>
-            <p className='footer-copy'>{copy}</p>
-            <Form/>
-            <div className='line'></div>
-            <div className='footer-image-container'>
-                <Image className='footer-logo' src='footer-logo.svg' width={500} height={500}/>
+            <div className="footer-top-container">
+                <p className='footer-copy'>{copy}</p>
+                <Form/>
             </div>
-            <p className='credits'>
-                A collaboration: Alvaro Castro Cid X Grant Bentley
-            </p>
-            <div className='footer-image-container'>
-                <Image className='footer-logo' src='footer-text-logo.svg' width={500} height={500}/>
+            <div className='line'></div>
+            <div className='footer-bottom-container'>
+                <div className='footer-image-container'>
+                    <Image className='footer-logo' src='footer-logo.svg' width={500} height={500}/>
+                </div>
+                <p className='credits'>
+                    A collaboration: Alvaro Castro Cid X Grant Bentley
+                </p>
+                <div className='footer-image-container'>
+                    <Image className='footer-logo' src='footer-text-logo.svg' width={500} height={500}/>
+                </div>
             </div>
         </footer>
     );
