@@ -1,8 +1,29 @@
+
 import Image from 'next/image';
+
+export async function GET(request) {
+    return new Response('Hello from Hero')
+}
+export async function postEmail(email) {
+    const response = await fetch('/api/submitEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+  
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+  
+    const data = await response.json();
+    return data;
+  }
 
 export const Form = () => {
     return (
-        <form>
+        <form >
             <input type="email" placeholder="Enter your email here to get started..." />
             <button type="submit">Get Started</button>
         </form>
