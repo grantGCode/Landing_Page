@@ -10,7 +10,7 @@ export async function POST(req, res) {
         headers: {'Content-Type': 'application/json'},
       });
     }
-    return new Response('success')
+    return new Response('success', console.log(email))
   } catch (error) {
       return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
         status: 500,

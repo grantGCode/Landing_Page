@@ -1,31 +1,42 @@
-
+"use client"
+import { useRef } from 'react';
 import Image from 'next/image';
-
-export async function GET(request) {
-    return new Response('Hello from Hero')
-}
-export async function postEmail(email) {
-    const response = await fetch('/api/submitEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email }),
-    });
-  
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
-    }
-  
-    const data = await response.json();
-    return data;
-  }
-
+    
 export const Form = () => {
+    const inputRef = useRef(null);
+    const addNewEmail = async (e) => {
+        // e.preventDefault();
+        console.log(inputRef.current);    
+    //     const response = await fetch('/api/submitEmail', {
+    //         body: JSON.stringify({
+    //             email: inputRef.current.value,
+    //         }),
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         method: 'POST',
+    //     });
+    
+    // if (!response.ok) {
+    //   throw new Error(`Error: ${response.statusText}`);
+    // }
+    
+    // const data = await response.json();
+    // return data;
+    }
     return (
-        <form >
-            <input type="email" placeholder="Enter your email here to get started..." />
-            <button type="submit">Get Started</button>
+        <form onSubmit={addNewEmail()}>
+            <input 
+                name='email'
+                type="email" 
+                ref={inputRef.current}
+                placeholder="Enter your email here to get started..."
+                // required
+                autoComplete="off" // remove after function is built
+                autoCapitalize="off"
+                autoCorrect='off' 
+            />
+            <button type="submit" value="" name='addNewEmail'>Get Started</button>
         </form>
     );
 }
