@@ -4,32 +4,39 @@ import Image from 'next/image';
     
 export const Form = () => {
     const inputRef = useRef(null);
-    const addNewEmail = async () => {
+    const addNewEmail = async (e) => {
+
         e.preventDefault();
-        console.log('line 9');    
-    //     const response = await fetch('/api/submitEmail', {
-    //         body: JSON.stringify({
-    //             email: inputRef.current.value,
-    //         }),
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         method: 'POST',
-    //     });
+        
+        if (!inputRef.current.value) {
+            throw new Error(`Empty input field.`);
+        }
+
+        const response = await fetch('/api/submitEmail', {
+            body: JSON.stringify({
+                email: inputRef.current?.value,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+        });
     
-    // if (!response.ok) {
-    //   throw new Error(`Error: ${response.statusText}`);
-    // }
-    
-    // const data = await response.json();
-    // return data;
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        
+        return data;
     }
+
     return (
-        <form >
+        <form onSubmit={addNewEmail()}>
             <input 
                 name='email'
                 type="email" 
-                ref={inputRef.current}
+                ref={inputRef}
                 placeholder="Enter your email here to get started..."
                 // required
                 autoComplete="off" // remove after function is built
