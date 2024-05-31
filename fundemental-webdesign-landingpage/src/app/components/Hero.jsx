@@ -22,9 +22,9 @@ export const Form = () => {
             method: 'POST',
         });
     
-        if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
-        }
+        // if (!response.ok) {
+        //     throw new Error(`Error: ${response.statusText}`);
+        // }
         
         const data = await response.json();
         
@@ -32,18 +32,18 @@ export const Form = () => {
     }
 
     return (
-        <form onSubmit={addNewEmail()}>
+        <form onSubmit={addNewEmail}>
             <input 
                 name='email'
                 type="email" 
                 ref={inputRef}
                 placeholder="Enter your email here to get started..."
-                // required
+                required
                 autoComplete="off" // remove after function is built
                 autoCapitalize="off"
                 autoCorrect='off' 
             />
-            <button onClick={() => (e.preventDefault(), addNewEmail)} value="" name='email'>Get Started</button>
+            <button type="submit" value="" name='addNewEmail'>Get Started</button>
         </form>
     );
 }
