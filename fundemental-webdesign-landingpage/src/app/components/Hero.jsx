@@ -4,9 +4,9 @@ import Image from 'next/image';
     
 export const Form = () => {
     const inputRef = useRef(null);
-    const addNewEmail = async (e) => {
-        // e.preventDefault();
-        console.log(inputRef.current);    
+    const addNewEmail = async () => {
+        e.preventDefault();
+        console.log('line 9');    
     //     const response = await fetch('/api/submitEmail', {
     //         body: JSON.stringify({
     //             email: inputRef.current.value,
@@ -25,7 +25,7 @@ export const Form = () => {
     // return data;
     }
     return (
-        <form onSubmit={addNewEmail()}>
+        <form >
             <input 
                 name='email'
                 type="email" 
@@ -36,7 +36,7 @@ export const Form = () => {
                 autoCapitalize="off"
                 autoCorrect='off' 
             />
-            <button type="submit" value="" name='addNewEmail'>Get Started</button>
+            <button onClick={() => (e.preventDefault(), addNewEmail)} value="" name='email'>Get Started</button>
         </form>
     );
 }
