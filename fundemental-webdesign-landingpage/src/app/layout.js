@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
           <StyledComponentsRegistry>
             <HomePageStyles>
               <Navbar />
+              <div id="modal-root"></div>
               {children}
               <Footer />
             </HomePageStyles>

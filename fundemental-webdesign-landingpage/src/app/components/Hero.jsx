@@ -21,10 +21,6 @@ export const Form = () => {
             },
             method: 'POST',
         });
-    
-        // if (!response.ok) {
-        //     throw new Error(`Error: ${response.statusText}`);
-        // }
         
         const data = await response.json();
         
@@ -39,7 +35,6 @@ export const Form = () => {
                 ref={inputRef}
                 placeholder="Enter your email here to get started..."
                 required
-                autoComplete="off" // remove after function is built
                 autoCapitalize="off"
                 autoCorrect='off' 
             />
