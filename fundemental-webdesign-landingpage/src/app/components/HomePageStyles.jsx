@@ -185,25 +185,26 @@ export const HomePageStyles = styled.div`
         display: block;
     }
 
-    .modal {
-  background: white;
-  height:100%;
-  width:100%;
-  border-radius: 15px;
-  padding: 15px;
-}
+    .modal-wrapper {
+       width: 500px;
+        height: 600px;
+    }
 
     .modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 339%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    .modal {
+        /* position: fixed; */
+    }
 
     .card-container {
         display: flex;

@@ -1,6 +1,7 @@
 "use client"
 import { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
     
 export const Form = () => {
     const inputRef = useRef(null);
@@ -38,7 +39,9 @@ export const Form = () => {
                 autoCapitalize="off"
                 autoCorrect='off' 
             />
-            <button type="submit" value="" name='addNewEmail'>Get Started</button>
+            <Link href="?modal=true">
+                <button type="submit" value="" name='addNewEmail'>Get Started</button>
+            </Link>
         </form>
     );
 }
