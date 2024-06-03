@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 
 export const MiddleCTA = () => {
@@ -15,6 +16,12 @@ export const MiddleCTA = () => {
         Here it is: when you win, we win, and you’ll likely recommend us, which means more business. It’s an incentive that, while less touchy, is real. 
         If that works for you, let’s get to work below. 
     `
+    const scrollToBottom = () => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+    }
 
     return (
         <div className="middle-cta-container">
@@ -23,7 +30,7 @@ export const MiddleCTA = () => {
                     <h4>When you win, we win. It’s that simple</h4>
                     <p className="middle-cta-copy-m">{mobileCopy}</p>
                     <p className="middle-cta-copy-d">{desktopCopy}</p>
-                    <button>Get Started</button>
+                    <button onClick={scrollToBottom}>Get Started</button>
                 </div>
                 <div className="section-image">
                     <Image className="male-model" src="/nhat-anh-nguyen-chi-awO5J5S75aM-unsplash.png" alt="Section Image" width={500} height={500} />
