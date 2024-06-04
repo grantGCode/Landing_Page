@@ -1,10 +1,47 @@
+"use client"
+import { useRef } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
+    
 export const Form = () => {
+    const inputRef = useRef(null);
+    const addNewEmail = async (e) => {
+
+        e.preventDefault();
+        
+        if (!inputRef.current.value) {
+            throw new Error(`Empty input field.`);
+        }
+
+        const response = await fetch('/api/submitEmail', {
+            body: JSON.stringify({
+                email: inputRef.current?.value,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+        });
+        
+        const data = await response.json();
+        
+        return data;
+    }
+
     return (
-        <form>
-            <input type="email" placeholder="Enter your email here to get started..." />
-            <button type="submit">Get Started</button>
+        <form onSubmit={addNewEmail}>
+            <input 
+                name='email'
+                type="email" 
+                ref={inputRef}
+                placeholder="Enter your email here to get started..."
+                required
+                autoCapitalize="off"
+                autoCorrect='off' 
+            />
+            <Link href="?modal=true">
+                <button type="submit" value="" name='addNewEmail'>Get Started</button>
+            </Link>
         </form>
     );
 }
