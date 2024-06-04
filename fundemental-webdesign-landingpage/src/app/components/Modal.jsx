@@ -25,7 +25,7 @@ export const Modal = () => {
             {modal &&
                 <div className="modal-overlay">
                     <div className="modal-wrapper">
-                        <Image className="modal" src='thank-card.svg' width={500} height={500} />
+                        <Image className="modal" src='/thank-you-card.png' width={500} height={500} />
                     </div>
                 </div>
             } 
