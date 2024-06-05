@@ -26,6 +26,7 @@ export const Form = () => {
         // const data = await response.json();
         
         // return data;
+        inputRef.current.value = '';
     }
 
     return (
