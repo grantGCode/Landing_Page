@@ -1,18 +1,20 @@
 "use client"
 import { useRef } from 'react';
 import Image from 'next/image';
+import { Modal } from "./Modal"
+import {useSearchParams} from "next/navigation"
 import Link from 'next/link';
     
 export const Form = () => {
     const inputRef = useRef(null);
     const addNewEmail = async (e) => {
-
+        
         e.preventDefault();
         
         if (!inputRef.current.value) {
             throw new Error(`Empty input field.`);
         }
-
+        
         const response = await fetch('/api/submitEmail', {
             body: JSON.stringify({
                 email: inputRef.current?.value,
@@ -28,7 +30,7 @@ export const Form = () => {
         // return data;
         inputRef.current.value = '';
     }
-
+    
     return (
         <form onSubmit={addNewEmail}>
             <input 
@@ -39,7 +41,7 @@ export const Form = () => {
                 required
                 autoCapitalize="off"
                 autoCorrect='off' 
-            />
+                />
 
                 <button type="submit" value="" name='addNewEmail'>Get Started</button>
             
@@ -48,25 +50,32 @@ export const Form = () => {
 }
 
 export const Hero = () => {
+    const searchParams = useSearchParams();
+    const modal = searchParams.get("modal");
     return (
-        <div className="hero-position">
+        <>
+            <div className="hero-position">
             <video className="video-bg" autoPlay muted loop>
-                <source src="/hero-bg-video.mp4" type="video/mp4" />
+            <source src="/hero-bg-video.mp4" type="video/mp4" />
             </video>
-            <div className="hero-container">
-                <div className="desktop-content-container">
-                    <div className="hero-text">
-                        <h1>Get your <span className="bold-blue">25%</span> discount below!</h1>
-                        <h2>Sign up below to get a 25% percent discount on your first professional website.</h2>
+                <div className="hero-container">
+                    {modal ? 
+                    <Modal /> :
+                    <div className="desktop-content-container">
+                        <div className="hero-text">
+                            <h1>Get your <span className="bold-blue">25%</span> discount below!</h1>
+                            <h2>Sign up below to get a 25% percent discount on your first professional website.</h2>
+                        </div>
+                        <div className="hero-form">
+                            <Form />
+                        </div>
+                    </div>}
+                    <div className="hero-image">
+                    {modal ? <div></div>:
+                        <Image className="hero-logo" src="/hero-logo.svg" alt="Hero Image" width={500} height={500} />}
                     </div>
-                    <div className="hero-form">
-                        <Form />
-                    </div>
-                </div>
-                <div className="hero-image">
-                    <Image className="hero-logo" src="/hero-logo.svg" alt="Hero Image" width={500} height={500} />
                 </div>
             </div>
-        </div>
+        </>
     );
 }

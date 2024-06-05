@@ -189,21 +189,13 @@ export const HomePageStyles = styled.div`
         display: block;
     }
 
-    .modal-wrapper {
-        width: 500px;
-        height: 600px;
-    }
     
-    .modal-overlay {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
+    
+    /* .modal-overlay {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
+    } */
 
     .card-container {
         display: flex;
