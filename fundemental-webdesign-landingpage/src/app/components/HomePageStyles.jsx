@@ -83,6 +83,10 @@ export const HomePageStyles = styled.div`
         font-size: 15px;
     }
 
+    input:focus::placeholder {
+        color: transparent;
+    }
+
     button {
         background-color: white;
         font-weight: bold;
