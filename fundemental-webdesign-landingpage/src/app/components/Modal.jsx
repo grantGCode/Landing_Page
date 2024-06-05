@@ -6,19 +6,19 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 export const Modal = () => {
     const searchParams = useSearchParams();
     const modal = searchParams.get("modal");
-    const pathname = usePathname(); 
-    const router = useRouter();
+    // const pathname = usePathname(); 
+    // const router = useRouter();
 
-    useEffect (() => {
-        if (modal) {
-            const timer =- setTimeout(() =>{
-                const newParams = new URLSearchParams(searchParams.toString());
-                newParams.delete("modal");
-                router.replace(`${pathname}?${newParams.toString()}`, undefined, { shallow: true });
-            }, 6000);
-            return () => clearTimeout(timer);
-        }
-    }, [modal, pathname, router, searchParams]);
+    // useEffect (() => {
+    //     if (modal) {
+    //         const timer =- setTimeout(() =>{
+    //             const newParams = new URLSearchParams(searchParams.toString());
+    //             newParams.delete("modal");
+    //             router.replace(`${pathname}?${newParams.toString()}`, undefined, { shallow: true });
+    //         }, 6000);
+    //         return () => clearTimeout(timer);
+    //     }
+    // }, [modal, pathname, router, searchParams]);
     
     return (
         <>

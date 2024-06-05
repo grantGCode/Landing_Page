@@ -23,9 +23,9 @@ export const Form = () => {
             method: 'POST',
         });
         
-        const data = await response.json();
+        // const data = await response.json();
         
-        return data;
+        // return data;
     }
 
     return (
@@ -39,9 +39,9 @@ export const Form = () => {
                 autoCapitalize="off"
                 autoCorrect='off' 
             />
-            <Link href="?modal=true">
+
                 <button type="submit" value="" name='addNewEmail'>Get Started</button>
-            </Link>
+            
         </form>
     );
 }

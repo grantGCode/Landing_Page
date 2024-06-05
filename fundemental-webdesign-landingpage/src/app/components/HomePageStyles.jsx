@@ -186,24 +186,19 @@ export const HomePageStyles = styled.div`
     }
 
     .modal-wrapper {
-       width: 500px;
+        width: 500px;
         height: 600px;
     }
-
+    
     .modal-overlay {
         position: absolute;
-        top: 0;
+        bottom: 0;
         width: 100%;
-        height: 339%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 0;
-    }
-
-    .modal {
-        /* position: fixed; */
     }
 
     .card-container {
