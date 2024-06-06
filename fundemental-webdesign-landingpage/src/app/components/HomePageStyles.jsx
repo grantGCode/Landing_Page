@@ -188,12 +188,6 @@ export const HomePageStyles = styled.div`
         object-position: center;
         display: block;
     }
-    
-    .modal-overlay {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
     .card-container {
         display: flex;
@@ -289,6 +283,18 @@ export const HomePageStyles = styled.div`
     .footer-image-container {
         display: flex;
         justify-content: center;
+    }
+    .thank-you-logo-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-thank-you-logo{
+        width: 268px;
+        height: 108px;
+        object-fit: cover;
+        padding-bottom: 25px;
     }
 
     .line {
