@@ -1,9 +1,7 @@
 "use client"
 import { useRef } from 'react';
 import Image from 'next/image';
-import { Modal } from "./Modal"
 import {useSearchParams} from "next/navigation"
-import Link from 'next/link';
     
 export const Form = () => {
     const inputRef = useRef(null);
