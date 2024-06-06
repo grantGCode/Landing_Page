@@ -51,7 +51,7 @@ export const Form = () => {
 
 export const Hero = () => {
     const searchParams = useSearchParams();
-    const modal = searchParams.get("modal");
+    const thankYou = searchParams.get("submitted");
     return (
         <>
             <div className="hero-position">
@@ -59,8 +59,10 @@ export const Hero = () => {
             <source src="/hero-bg-video.mp4" type="video/mp4" />
             </video>
                 <div className="hero-container">
-                    {modal ? 
-                    <Modal /> :
+                    {thankYou ? 
+                        <div className="thank-you-wrapper">
+                            <Image className="thank-you-card" src='/thank-you-card.png' width={500} height={500} />
+                        </div>:
                     <div className="desktop-content-container">
                         <div className="hero-text">
                             <h1>Get your <span className="bold-blue">25%</span> discount below!</h1>
@@ -71,8 +73,7 @@ export const Hero = () => {
                         </div>
                     </div>}
                     <div className="hero-image">
-                    {modal ? <div></div>:
-                        <Image className="hero-logo" src="/hero-logo.svg" alt="Hero Image" width={500} height={500} />}
+                        <Image className="hero-logo" src="/hero-logo.svg" alt="Hero Image" width={500} height={500} />
                     </div>
                 </div>
             </div>

@@ -189,13 +189,17 @@ export const HomePageStyles = styled.div`
         display: block;
     }
 
+    .modal {
+        width: 100%;
+        height: 100%;
+    }
     
     
-    /* .modal-overlay {
+    .modal-overlay {
         display: flex;
         justify-content: center;
         align-items: center;
-    } */
+    }
 
     .card-container {
         display: flex;
@@ -231,6 +235,17 @@ export const HomePageStyles = styled.div`
         color: white;
         font-weight: 200;
         font-size: 12x;
+    }
+    .thank-you-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .thank-you-card {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .black-font {
