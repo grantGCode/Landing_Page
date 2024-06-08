@@ -63,7 +63,7 @@ export const Hero = () => {
                 <div className="hero-container">
                     {thankYou ? 
                         <div className="thank-you-wrapper">
-                            <Image className="thank-you-card" src='/thank-you-card.png' width={500} height={500} />
+                            <Image className="thank-you-card" src='/thank-you-card.png' width={500} height={500} alt="thank-you-card"/>
                         </div>:
                     <div className="desktop-content-container">
                         <div className="hero-text">
@@ -75,7 +75,7 @@ export const Hero = () => {
                         </div>
                     </div>}
                     <div className="hero-image">
-                        <Image className="hero-logo" src="/hero-logo.svg" alt="Hero Image" width={500} height={500} />
+                        <Image className="hero-logo" src="/hero-logo.svg" width={500} height={500} alt="hero-logo" />
                     </div>
                 </div>
             </div>
