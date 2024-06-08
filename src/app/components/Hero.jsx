@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import Image from "next/image";
 import {useRouter, useSearchParams} from "next/navigation"
     
@@ -55,7 +55,7 @@ export const Hero = () => {
     const searchParams = useSearchParams();
     const thankYou = searchParams.get("submitted");
     return (
-        <>
+        <Suspense fallback={"Loading..."}>
             <div className="hero-position">
             <video className="video-bg" autoPlay muted loop>
             <source src="/hero-bg-video.mp4" type="video/mp4" />
@@ -79,6 +79,6 @@ export const Hero = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </Suspense>
     );
 }
