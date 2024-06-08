@@ -10,9 +10,11 @@ export const Form = () => {
         
         e.preventDefault();
         
-        if (!inputRef.current.value) {
-            throw new Error(`Empty input field.`);
-        }
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        
+        if (!inputRef.current.value || !emailRegex.test(inputRef.current.value)) {
+            throw new Error(`Empty input field. Or incorrectly structured email address.`);
+        };
 
         const response = await fetch("/api/submitEmail", {
             body: JSON.stringify({
