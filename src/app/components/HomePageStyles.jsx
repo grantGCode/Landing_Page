@@ -444,6 +444,12 @@ export const HomePageStyles = styled.div`
             justify-content: center;
         }
 
+        .footer-top-container, .footer-bottom-container {
+            background-color: black;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
         .footer-top-container {
             display: flex;
             justify-content: center;
