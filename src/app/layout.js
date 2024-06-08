@@ -1,7 +1,6 @@
 import StyledComponentsRegistry from './lib/registry'
 import { HomePageStyles } from "./components/HomePageStyles";
 import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
 import { Poppins } from "@next/font/google";
 import './styles.css'
 
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
             <HomePageStyles>
               <Navbar />
               {children}
-              <Footer />
             </HomePageStyles>
           </StyledComponentsRegistry>
         </body>
