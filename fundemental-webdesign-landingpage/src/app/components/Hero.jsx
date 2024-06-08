@@ -1,10 +1,11 @@
 "use client"
-import { useRef } from 'react';
-import Image from 'next/image';
-import {useSearchParams} from "next/navigation"
+import { useRef } from "react";
+import Image from "next/image";
+import {useRouter, useSearchParams} from "next/navigation"
     
 export const Form = () => {
     const inputRef = useRef(null);
+    const router = useRouter()
     const addNewEmail = async (e) => {
         
         e.preventDefault();
@@ -12,36 +13,39 @@ export const Form = () => {
         if (!inputRef.current.value) {
             throw new Error(`Empty input field.`);
         }
-        
-        const response = await fetch('/api/submitEmail', {
+
+        const response = await fetch("/api/submitEmail", {
             body: JSON.stringify({
                 email: inputRef.current?.value,
             }),
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
-            method: 'POST',
+            method: "POST",
         });
-        
-        // const data = await response.json();
-        
-        // return data;
-        inputRef.current.value = '';
+ 
+         inputRef.current.value = "";
+         if (response.ok) { 
+             router.push('?submitted=true');
+        } else {
+            throw new Error(
+                window.alert('Something went wrong')
+            )
+        } 
     }
     
     return (
         <form onSubmit={addNewEmail}>
             <input 
-                name='email'
+                name="email"
                 type="email" 
                 ref={inputRef}
                 placeholder="Enter your email here to get started..."
                 required
                 autoCapitalize="off"
-                autoCorrect='off' 
-                />
-
-                <button type="submit" value="" name='addNewEmail'>Get Started</button>
+                autoCorrect="off" 
+            />
+            <button type="submit" value="" name='addNewEmail'>Get Started</button>
             
         </form>
     );
