@@ -1,8 +1,8 @@
 'use client'
 import { Form } from './Hero';
 import Image from 'next/image';
-import {useSearchParams} from "next/navigation"
-import { FaMugHot } from "react-icons/fa";
+import { useSearchParams } from "next/navigation"
+import { Suspense } from 'react';
 
 export const Footer = () => {
     const searchParams = useSearchParams();
@@ -17,31 +17,32 @@ export const Footer = () => {
         set up a call.
     `
     return (
-        <footer>
-                {thankYou ? 
-                    <div className="footer-top-container">
-                        <p className='footer-copy'>{thankYouCopy}</p>
-                        <div className='thank-you-logo-wrapper'>    
-                            <Image className='footer-thank-you-logo' src='/footer-logo-and-thank-you.png' width={268} height={100} alt='thankyou' />
-                        </div>
-                    </div>:
-            <div className="footer-top-container">
-                <p className='footer-copy'>{copy}</p>
-                <Form/>
-            </div>
-}
+        <Suspense fallback={<div>Loading...</div>}>
+            {thankYou ? 
+                <div className="footer-top-container">
+                    <p className='footer-copy'>{thankYouCopy}</p>
+                    <div className='thank-you-logo-wrapper'>    
+                        <Image className='footer-thank-you-logo' src='/footer-logo-and-thank-you.png' width={268} height={100} alt='thankyou' />
+                    </div>
+                </div>
+                :
+                <div className="footer-top-container">
+                    <p className='footer-copy'>{copy}</p>
+                    <Form/>
+                </div>
+            }
             <div className='line'></div>
             <div className='footer-bottom-container'>
                 <div className='footer-image-container'>
                     <Image className='footer-logo' src='footer-logo.svg' width={500} height={500} alt='footer-logo'/>
                 </div>
                 <p className='credits'>
-                <FaMugHot size={14} alt='mug-icon'/> A collaboration: Alvaro Castro Cid X Grant Bentley
+                A collaboration: Alvaro Castro Cid X Grant Bentley
                 </p>
                 <div className='footer-image-container'>
                     <Image className='footer-logo' src='footer-text-logo.svg' width={500} height={500} alt='footer-logo' />
                 </div>
             </div>
-        </footer>
+        </Suspense>
     );
 }
