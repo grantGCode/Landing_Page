@@ -317,6 +317,17 @@ export const HomePageStyles = styled.div`
         height: 50%;
     }
 
+
+    .footer-top-container, .footer-bottom-container {
+        background-color: black;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-copy {
+        padding: 20px 50px;
+    }
+
     @media (min-width: 975px){
 
         .hero-position {
@@ -453,6 +464,7 @@ export const HomePageStyles = styled.div`
 
 
         .footer-copy {
+            padding: 0px;
             width: 20%;
         }
 
