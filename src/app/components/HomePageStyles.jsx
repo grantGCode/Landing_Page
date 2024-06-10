@@ -189,6 +189,12 @@ export const HomePageStyles = styled.div`
         display: block;
     }
 
+    .mug-icon {
+        width: 30px;
+        height: 20px;
+        padding-right: 10px;
+    }
+
     .card-container {
         display: flex;
         justify-content: center;
