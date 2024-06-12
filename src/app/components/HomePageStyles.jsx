@@ -189,6 +189,12 @@ export const HomePageStyles = styled.div`
         display: block;
     }
 
+    .mug-icon {
+        width: 30px;
+        height: 20px;
+        padding-right: 10px;
+    }
+
     .card-container {
         display: flex;
         justify-content: center;
@@ -315,6 +321,17 @@ export const HomePageStyles = styled.div`
         object-fit: contain;
         width: 50%;
         height: 50%;
+    }
+
+
+    .footer-top-container, .footer-bottom-container {
+        background-color: black;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-copy {
+        padding: 20px 50px;
     }
 
     @media (min-width: 975px){
@@ -453,6 +470,7 @@ export const HomePageStyles = styled.div`
 
 
         .footer-copy {
+            padding: 0px;
             width: 20%;
         }
 
