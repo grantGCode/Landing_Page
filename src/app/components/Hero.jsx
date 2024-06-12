@@ -25,6 +25,7 @@ export const Form = () => {
         });
  
          inputRef.current.value = "";
+         console.log(response.ok)
          if (response.ok) { 
              router.push('?submitted=true');
         } else {
