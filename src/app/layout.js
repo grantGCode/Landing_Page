@@ -2,7 +2,7 @@ import StyledComponentsRegistry from './lib/registry'
 import { HomePageStyles } from "./components/HomePageStyles";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { Poppins } from "@next/font/google";
+import { Poppins } from "next/font/google";
 import './styles.css'
 
 const poppins = Poppins({ 
@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Fundemental Web Design Landing Page",
+  title: "Fundamental Web Design Landing Page",
   description: "Fundamental Web Design is not just a technology shop but a dedicated partner in your business journey. We are committed to working tirelessly, side by side with you, to ensure your online success. ",
 };
 
